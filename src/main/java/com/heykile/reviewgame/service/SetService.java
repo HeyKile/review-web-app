@@ -1,7 +1,10 @@
-package com.heykile.reviewgame;
+package com.heykile.reviewgame.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.heykile.reviewgame.repository.SetRepository;
+import com.heykile.reviewgame.util.VocabSet;
 
 
 @Service

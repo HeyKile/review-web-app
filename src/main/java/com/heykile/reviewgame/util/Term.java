@@ -1,4 +1,4 @@
-package com.heykile.reviewgame;
+package com.heykile.reviewgame.util;
 
 public class Term {
     

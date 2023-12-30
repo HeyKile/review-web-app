@@ -1,4 +1,4 @@
-package com.heykile.reviewgame;
+package com.heykile.reviewgame.util;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.heykile.reviewgame;
+package com.heykile.reviewgame.controller;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
