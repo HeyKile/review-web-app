@@ -99,3 +99,5 @@ function Modal ({ onClose }) {
       </div>
     );
 }
+
+export default ShowSetCreationMenu;

@@ -34,3 +34,5 @@ function DateAndTime () {
         </div>
     );
 }
+
+export default HomeHeader;

@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from 'react';
 import './App.css';
-import './Header';
-import './ActionRow';
+import React, { useState, useEffect } from 'react';
+import HomeHeader from './Header.js';
+import ActionRow from './ActionRow.js';
+import DisplaySetGrid from './SetDisplayGrid.js';
 
 function App() {
   return (
     <div className="App">
       <HomeHeader />
       <ActionRow />
-      {/* <SetDisplayGrid /> */}
+      <DisplaySetGrid />
     </div>
   );
 }
