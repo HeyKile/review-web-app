@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
-function DisplaySetGrid () {
+function DisplaySetList () {
 
     const data = Array(10).fill(null);
 
@@ -9,11 +9,11 @@ function DisplaySetGrid () {
         <div className='App-set-display-list'>
             {data.map((_, index) => (
                 <div key={index} className='App-set-rectangle'>
-                    Hello {index}
+                    Temp Set {index}
                 </div>
             ))}
         </div>
     );
 }
 
-export default DisplaySetGrid;
+export default DisplaySetList;

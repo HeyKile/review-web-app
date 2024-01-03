@@ -1,19 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import './SetCreator.js';
+import SetCreationMenu from './SetCreator.js';
 
 function ActionRow () {
-    const [showCreationMenu, setShowSetCreationMenu] = useState(false);
+    const [displayCreationMenu, SetCreationMenu] = useState(false);
     return (
       <div className='App-function-row'>
-        <CreateSet onClick={() => setShowSetCreationMenu(true)} />
-        {showCreationMenu && <showCreationMenu onClose={() => setShowSetCreationMenu(false)} />}
-        {SearchForSet()}
+        <CreateSetButton onClick={() => SetCreationMenu(true)} />
+        {displayCreationMenu && <SetCreationMenu onClose={() => displayCreationMenu(false)}/>}
       </div>
     );
   }
 
-function CreateSet ({ onClick }) {
+function CreateSetButton ({ onClick }) {
   return (
     <button className='App-button' onClick={onClick}>Create New Set</button>
   );
