@@ -2,15 +2,19 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 
 function SetCreationMenu ({ onClose }) {
-    return <Modal onClose={onClose} />;
+    return (
+      <div>
+        {CreationInputs}
+      </div>
+    );
 }
 
 function Modal ({onClose}) {
 
   return (
-    <div>
+    <div className='.App-modal'>
       <h1>Set Creator</h1>
-      <CreationInputs />
+      {CreationInputs}
     </div>
   );
 

@@ -9,7 +9,6 @@ function ActionRow () {
       <div className='App-function-row'>
         <CreateSetButton onClick={() => SetCreationMenu(true)} />
         {displayCreationMenu && <SetCreationMenu onClose={() => displayCreationMenu(false)}/>}
-        <SetCreationMenu />
       </div>
     );
   }
