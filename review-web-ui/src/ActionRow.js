@@ -4,10 +4,12 @@ import SetCreationMenu from './SetCreator.js';
 
 function ActionRow () {
     const [displayCreationMenu, SetCreationMenu] = useState(false);
+
     return (
       <div className='App-function-row'>
         <CreateSetButton onClick={() => SetCreationMenu(true)} />
         {displayCreationMenu && <SetCreationMenu onClose={() => displayCreationMenu(false)}/>}
+        <SetCreationMenu />
       </div>
     );
   }
