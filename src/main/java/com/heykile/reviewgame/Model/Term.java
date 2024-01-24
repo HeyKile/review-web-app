@@ -1,9 +1,22 @@
 package com.heykile.reviewgame.Model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Term {
     
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
     private String word;
     private String definition;
+
+    public Term() {
+    }
 
     public Term (String word, String definition) {
         this.word = word;

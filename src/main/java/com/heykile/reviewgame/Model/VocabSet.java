@@ -2,60 +2,23 @@ package com.heykile.reviewgame.Model;
 
 import java.util.List;
 
-import org.springframework.data.annotation.Id;
-
-import jakarta.annotation.Generated;
+import javax.persistence.*;
 
 @Entity
 public class VocabSet {
     @Id
-    @GeneratedValue(strategy = GenerationType.INDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    
-    @Column(name = "user_id")
-    private String userId;
 
-    public VocabSet (String userId, String name, String category, List<Term> terms) {
-        this.userId = userId;
-        this.setName = name;
-        this.setCategory = category;
-        this.terms = terms;
-    }
+    private String setName;
+    private String categoryName;
+    private int numTermsStudied;
 
-    public void setUserId (String userId) {
-        this.userId = userId;
-    }
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
-    public void setName (String name) {
-        this.setName = name;
-    }
-
-    public void setCategory (String category) {
-        this.setCategory = category;
-    }
-
-    public String getUserId () {
-        return this.userId;
-    }
-
-    public String getName () {
-        return this.setName;
-    }
-
-    public String getCategory () {
-        return this.setCategory;
-    }
-
-    public List<Term> getTerms () {
-        return this.terms;
-    }
-
-    public void addTerm (Term term) {
-        terms.add(term);
-    }
-
-    public boolean removeTerm (Term term) {
-        return terms.remove(term);
-    }
+    @OneToMany(mappedBy = "vocabSet", cascade = CascadeType.ALL)
+    private List<Term> vocabTerms;
 
 }
