@@ -67,6 +67,10 @@ public class VocabSet {
     public List<Term> getVocabTerms() {
         return vocabTerms;
     }
+
+    public int getTotalTerms() {
+        return vocabTerms.size();
+    }
     
     public void setVocabTerms(List<Term> vocabTerms) {
         this.vocabTerms = vocabTerms;
