@@ -1,13 +1,19 @@
-package com.heykile.reviewgame.util;
+package com.heykile.reviewgame.Model;
 
 import java.util.List;
 
+import org.springframework.data.annotation.Id;
+
+import jakarta.annotation.Generated;
+
+@Entity
 public class VocabSet {
+    @Id
+    @GeneratedValue(strategy = GenerationType.INDENTITY)
+    private long id;
     
+    @Column(name = "user_id")
     private String userId;
-    private String setName;
-    private String setCategory;
-    private List<Term> terms;
 
     public VocabSet (String userId, String name, String category, List<Term> terms) {
         this.userId = userId;
