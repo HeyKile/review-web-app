@@ -22,6 +22,7 @@ public class VocabSet {
     private List<Term> vocabTerms;
 
     public VocabSet() {
+        numTermsStudied = 0;
     }
 
     public long getId() {
@@ -67,13 +68,21 @@ public class VocabSet {
     public List<Term> getVocabTerms() {
         return vocabTerms;
     }
+    
+    public void setVocabTerms(List<Term> vocabTerms) {
+        this.vocabTerms = vocabTerms;
+    }
 
     public int getTotalTerms() {
         return vocabTerms.size();
     }
-    
-    public void setVocabTerms(List<Term> vocabTerms) {
-        this.vocabTerms = vocabTerms;
+
+    public void addTerm(Term term) {
+        vocabTerms.add(term);
+    }
+
+    public boolean removeTerm(Term term) {
+        return vocabTerms.remove(term);
     }
 
 }

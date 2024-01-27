@@ -20,6 +20,9 @@ public class SetService {
     }
 
     public VocabSet createSet (VocabSet vocabSet) {
+        if (vocabSet == null) {
+            return null;
+        }
         return setRepository.save(vocabSet);
     }
 
@@ -29,7 +32,8 @@ public class SetService {
     }
 
     public List<VocabSet> retrieveUserSets (String userId) {
-        return setRepository.findByUserId(userId); // TODO: idk if this works or not
+        long id = Long.parseLong(userId);
+        return setRepository.findByUserId(id); // TODO: idk if this works or not
     }
 
 }

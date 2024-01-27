@@ -11,6 +11,12 @@ import java.util.List;
 @Repository
 public interface SetRepository extends JpaRepository<VocabSet, Long> {
 
-    List<VocabSet> findByUserId(String userId);
+    // returns list of all vocab sets for a user
+    List<VocabSet> findByUserId(long id);
 
+    // returns a given user's VocabSet of the given set name
+    VocabSet findByUserAndSetName(long id, String setName);
+
+    // returns a list of a user's vocab sets for a given category
+    List<VocabSet> findByUserAndCategoryName(long id, String categoryName);
 }
